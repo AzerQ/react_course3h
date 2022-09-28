@@ -10,3 +10,7 @@ export function T3(){
 export function Greeting(Name){
     console.log(`Hello, ${Name}`);
 }
+
+export function Add(a,b){
+    return a+b;
+}
