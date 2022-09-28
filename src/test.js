@@ -7,3 +7,6 @@ export function T2(){
 export function T3(){
     console.log(3);
 }
+export function Greeting(Name){
+    console.log(`Hello, ${Name}`);
+}
