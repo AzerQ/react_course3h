@@ -4,3 +4,6 @@ export function T1(){
 export function T2(){
     console.log(2);
 }
+export function T3(){
+    console.log(3);
+}
