@@ -1,32 +1,22 @@
 import React, {useState} from "react";
+import "./styles/App.css"
+import PostList from "./components/PostList";
+import AddPost from "./components/AddPost";
+
 
 function App() {
-    const [likes, setLikes] = useState(0);
-    const [value, setValue] = useState("Какой-то текст");
-
-    function inc() {
-        setLikes(likes + 1);
-        console.log(`likes count = ${likes}`);
-    }
-
-    function dec() {
-        setLikes(likes - 1);
-        console.log(`likes count = ${likes}`);
-    }
-
-    //Hi there
-
-    return (
-        <div className="App">
-            <h1>{likes}</h1>
-            <h1>{value}</h1>
-            <input type="text" value={value}
-                   onChange={event => setValue(event.target.value) }
-            />
-            <button onClick={inc}>inc</button>
-            <button onClick={dec}>dec</button>
-        </div>
-    );
+    const [posts, setPosts] = useState([
+        {id: 1, title: "JavaScript", body: "Vero sed sit sed qui est amet amet."},
+        {id: 2, title: "C#", body: "Amet veniam luptatum facilisis sea lorem aliquyam ut diam et."},
+        {id: 3, title: "Ruby", body: "Nonummy amet duo laoreet sanctus nulla erat justo nonumy dolor."},
+        {id: 4, title: "Java", body: "Dolore possim diam gubergren ut odio sit no kasd duisr."},
+        {id: 5, title: "React", body: "Sed no erat sea labore amet et diam dolore invidunt."},
+        {id: 6, title: "Python", body: "Et justo sed amet feugait et sadipscing dolores rebum diam."}
+    ])
+    return (<div className="App">
+        <AddPost/>
+        <PostList posts={posts} title="Все посты (all)"/>
+    </div>);
 }
 
 export default App;
